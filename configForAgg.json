@@ -1,0 +1,31 @@
+{
+    "dataSource": {
+        "contrack_druid_datasource_ds": {
+                "clicks": [["click"],["\"Math.pow(click,2)\"","\"click\""]],
+                "convs": [["conversion"],["\"Math.pow(conversion,2)\"", "\"conversion\""]],
+                "lpclicks": [["lp_click"],["\"Math.pow(lp_click,2)\"", "\"lp_click\""]],
+                "outs": [["lp_click"],["\"Math.pow(lp_click,2)\"", "\"lp_click\""]],
+                "cost": [["cost_per_click","click"],["\"Math.pow(cost_per_click*click,2)\"","\"cost_per_click*click\""]],
+                "income": [["payout","conversion"],["\"Math.pow(payout*conversion,2)\"","\"payout*conversion\""]],
+                "net": [["payout","conversion","cost_per_click","click"],["\"Math.pow((payout*conversion-cost_per_click*click),2)\"","\"payout*conversion-cost_per_click*click\""]],
+                "cr": [["conversion","click"],["\"Math.pow((conversion/click),2)\"","\"conversion/click\""]],
+                "epc": [["payout","conversion","click"],["\"Math.pow(((payout*conversion)/click),2)\"","\"(payout*conversion)/click\""]],
+                "roi": [["payout","conversion","cost_per_click","click"],["\"Math.pow(((payout*conversion-cost_per_click*click)/cost_per_click*click),2)\"","\"(payout*conversion-cost_per_click*click)/cost_per_click*click\""]]
+        },
+        "ymds_druid_datasource": {
+                "click": [["click"],["click"],["\"Math.pow(click,2)\"","\"click\""]],
+                "conversion": [["conversion"],["conversion"],["\"Math.pow(conversion,2)\"", "\"conversion\""]],
+                "conversion2": [["conversion2"],["conversion2"],["\"Math.pow(conversion2,2)\"", "\"conversion2\""]],
+                "unique_click": [["unique_click"],["unique_click"],["\"Math.pow(unique_click,2)\"", "\"unique_click\""]],
+                "revenue": [["revenue"],["revenue"],["\"Math.pow(revenue,2)\"", "\"revenue\""]],
+                "cost": [["cost"],["cost"],["\"Math.pow(cost,2)\"","\"cost\""]],
+                "profit": [["revenue","cost"],["revenue","cost"],["\"Math.pow((revenue-cost),2)\"","\"revenue-cost\""]],
+                "epc": [["click","cost"],["click","cost"],["\"Math.pow((cost/click),2)\"","\"cost/click\""]],
+                "cr": [["conversion","click"],["conversion","click"],["\"Math.pow((conversion/click),2)\"","\"conversion/click\""]],
+                "arpa": [["conversion","revenue"],["conversion","revenue"],["\"Math.pow((revenue/conversion)\"","\"revenue/conversion\""]],
+                "acpa": [["conversion","cost"],["conversion","cost"],["\"Math.pow((cost/conversion),2)\"","\"cost/conversion\""]],
+                "rpc": [["revenue","click"],["revenue","click"],["\"Math.pow((revenue/click),2)\"","\"revenue/click\""]],
+                "cpc": [["cost","click"],["cost","click"],["\"Math.pow((cost/click),2)\"","\"cost/click\""]]
+        }
+    }
+}
